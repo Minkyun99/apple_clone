@@ -1,0 +1,35 @@
+.globalnav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    padding-bottom: 16px;
+}
+
+.globalnav-menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globalnav-item {
+    padding: 0.5em 1em;
+}
+
+.section-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: black;
+}
+
+.earth-day-ribbon-copy {
+    color: #fff;
+    padding: 0em 0.5em;
+}
+
+.icon-chevronright::before, .icon-chevronright::after {
+    content: ".";
+}

@@ -1,0 +1,25 @@
+:root {
+    --r-localnav-height : 52px;
+    --r-localnav-stacked-height: 66px;
+    --r-localnav-gn-height: var(--r-globalnav-height, 44px);
+    --r-localnav-viewport-large-min-width : 1024px;
+    --r-localnav-viewport-large-query : (min-width:1024px);
+    --r-localnav-viewport-medium-min-width : 834px;
+    --r-localnav-viewport-medium-max-width : 1023px;
+    --r-localnav-viewport-medium-query : (min-width : 834px);
+    --r-localnav-viewport-small-min-width : 320px;
+    --r-localnav-viewport-small-max-width : 833px;
+    --r-localnav-viewport-small-query : (min-width:320px);
+}
+
+:root {
+    --sk-focus-color:#0071E3;
+    --sk-focus-color-alt: rgb(0,0,0);
+    --sk-focus-offset : 1px;
+    --sk-focus-offset-container : 3px;
+}
+
+:root {
+    --r-globalnav-background-opened : #fafafc;
+    --r-globalnav-background-opened-dark : #161617;
+}

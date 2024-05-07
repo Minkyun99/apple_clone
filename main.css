@@ -1,0 +1,98 @@
+.main {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr);
+    grid-auto-rows: minmax(200px, 740px);
+    grid-gap: 0px;
+}
+
+.item1 {
+    position: relative;
+    width: 100vw;
+    height: 740px;
+
+}
+
+.headline {
+    padding: 0em;
+    margin: 0em 0em 0em 0em;
+    font-size: 4em;
+}
+
+.subhead {
+    font-size: 1.6em;
+    margin: -0.1em;
+}
+
+.text-box1 {
+    text-align: center;
+    pointer-events: none;
+    color: #fff;
+    padding-top: 2em;
+}
+
+.text-box2 {
+    text-align: center;
+    pointer-events: none;
+    color: #fff;
+    padding-top: 2em;
+}
+
+.text-box3 {
+    text-align: center;
+    pointer-events: none;
+    color: #fff;
+    padding-top: 2em;
+}
+
+.main-button-box {
+    padding-top: 2em;
+}
+
+.button-primary {
+    padding: 1em;
+    margin: 0em 1em;
+    border: solid 1px #06c;
+    border-radius: 2em;
+    background-color: #06c;
+    color: #fff;
+}
+
+.button-tertiary {
+    padding: 1em;
+    margin: 0em 1em;
+    border: solid 1px #06c;
+    border-radius: 2em;
+}
+
+.unit-image-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.unit-image-iphone-15-pro-hero-iphone15pro {
+    width: 100%;
+    height: 736px; 
+    background-size: cover;
+    background-image : url(./image/hero_iphone15pro__i70z9oz3hj2i_large.jpg);
+    position: absolute;
+    /* transform: translateX(-50%); */
+    left: calc(50%, 0px);
+
+}
+
+.unit-image-iphone-15-pro-iphone15-announce {
+    width: 100%;
+    height: 736px; 
+    background-size: cover;
+    background-image : url(./image/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg);
+}
+
+.unit-image-macbook-air-m3-hero-macbook-air-m3 {
+    width: 100%;
+    height: 736px; 
+    background-size: cover;
+    background-image: url(./image/promo_macbook_air_m3__e43jegok3wuq_large.jpg);
+}
