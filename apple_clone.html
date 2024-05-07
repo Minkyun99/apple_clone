@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        const globalheader = document.createElement('div')
+        const globalnav = document.createElement('nav')
+        const globalnav_content = document.createElement('nav')
+        const globalnav_item = document.createElement('div')
+        const globalnav_menuback_button = document.createElement('button')
+        const globalnav_chevron_icon = document.createElement('span')
+        const mainmenu_svg = document.createElement('svg')
+
+        const globalnav_list = document.createElement('ul')
+        const globalnav_item_apple = document.createElement('li')
+        const globalnav_link = document.createElement('a')
+        const globalnav_image_regular = document.createElement('span')
+        const globalnav_svg1 = document.createElement('svg')
+
+        globalnav.setAttribute('id', 'globalnav')
+        globalnav_content.setAttribute('class', 'globalnav-content')  
+        globalnav_item.setAttribute('class', 'globalnav-item globalnav-menuback')
+        globalnav_menuback_button.setAttribute('aria-label', '메인메뉴')
+        globalnav_menuback_button.setAttribute('class', 'globalnav-menuback-button')
+        globalnav_chevron_icon.setAttribute('class', 'globalnav-chevron-icon')
+
+        globalnav_list.setAttribute('id', 'globalnav-list')
+        globalnav_list.setAttribute('class', 'globalnav-list')
+        globalnav_item_apple.setAttribute('class', 'global-item globalnav-item-apple')
+        globalnav_item_apple.setAttribute('data-analytics-element-engagement', 'gloablnav hover - apple')
+        globalnav_link.setAttribute('herf', '/kr/')
+        globalnav_link.setAttribute('data-globalnav-item-name', 'apple')
+        globalnav_link.setAttribute('data-analytics-title', 'apple home')
+        globalnav_link.setAttribute('aria-label', 'Apple')
+        globalnav_link.setAttribute('class', 'globalnav-link globalnav-link-apple')
+        globalnav_image_regular.setAttribute('class', 'globalnav-image-regular globalnav-link-imae')
+        globalnav_svg1.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+
+        
+        
+        globalnav.textContent = 'test'
+        globalnav_content.textContent = 'test'
+        globalnav_list.innerHTML = 'text'
+        globalnav_item_apple.innerHTML = 'text'
+
+        document.body.append(globalheader)
+        globalheader.appendChild(globalnav)
+        globalnav.appendChild(globalnav_content)
+        
+        globalnav_content.appendChild(globalnav_item)
+        globalnav_content.appendChild(globalnav_list)
+        globalnav_item.appendChild(globalnav_menuback_button)
+        globalnav_menuback_button.appendChild(globalnav_chevron_icon)
+        globalnav_chevron_icon.appendChild(mainmenu_svg)
+
+        globalnav_list.appendChild(globalnav_item_apple)
+        globalnav_item_apple.appendChild(globalnav_link)
+        globalnav_link.appendChild(globalnav_image_regular)
+        globalnav_image_regular.appendChild(globalnav_svg1)
+
+
+        body.style.cssText = "minwidth: 320px; font-size : 17px; margin : 0px; padding: 0px; display:block"
+        globalnav_svg1.style.cssText = "height : 44; width : 14;"
+
+
+    })
+</script>
+<body>
+    
+</body>
+</html>
