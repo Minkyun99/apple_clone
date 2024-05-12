@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function(){
     const header = document.getElementById('header')
+    const menubar = document.getElementById('menubar')
     const globalnav_link_text_Store = document.getElementById('globalnav-link-text Store')
     const globalnav_link_text_Mac = document.getElementById('globalnav-link-text Mac')
     const globalnav_link_text_iPad = document.getElementById('globalnav-link-text iPad')
@@ -13,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const globalnav_link_text_Acc = document.getElementById('globalnav-link-text Acc')
     const globalnav_link_text_Customer = document.getElementById('globalnav-link-text Customer')
     
-    const menubar = document.createElement('div')
     const menubar_flex = document.createElement('div')
     const menubar_ul = document.createElement('ul')
     const menubar_ul_2 = document.createElement('ul')
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
     menubar.setAttribute('id', 'menubar')
 
 
-    header.appendChild(menubar)
+    // header.appendChild(menubar)
     menubar.appendChild(menubar_flex)
     menubar_flex.appendChild(menubar_ul)
     menubar_flex.appendChild(menubar_ul_2)
@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function(){
     const Store_menubar2 = ['빠른 링크','매장 찾기', '주문 상태', 'Apple Tarade In', '할부 방식']
     const Store_menubar3 = ['특별 할인 쇼핑하기','인증 리퍼비쉬 제품', '교육', '비즈니스']
     
+    const Mac_menubar = ['Mac 살펴보기', 'Mac 모두 살펴보기', 'MacBook Air', 'MacBook Pro', 'iMac', 'Mac mini', 'Mac Studio', ' Mac Pro', '디스플레이']
+    const Mac_menubar1 = ['Mac 쇼핑하기', 'Mac 쇼핑하기', 'Mac 악세서리', 'Apple Trade In', '할부방식']
+    const Mac_menubar2 = ['Mac 지원', 'Mac을 위한 AppleCare+', 'MacOS Sonoma', 'Apple이 만든 앱', '연속성', 'iCloud+', 'Mac과 비즈니스', '교육']
+
     const menubar_li_first_store_menubar = document.createElement('li')
     const menubar_li_first_store_menubar2 = document.createElement('li')
     const menubar_li_first_store_menubar3 = document.createElement('li')
@@ -83,17 +87,21 @@ const hover_menubar_noneshow = function (){
     menubar_ul_3.innerHTML = ''
 }
 
-    globalnav_link_text_Store.addEventListener('mouseover', hover_menubar_Store_show)
-    globalnav_link_text_Store.addEventListener('mouseout', hover_menubar_noneshow)
+let isMenuVisible = false;
 
-    menubar_ul.addEventListener('mouseenter', hover_menubar_Store_show)
-    menubar_ul.addEventListener('mouseleave', hover_menubar_noneshow)
-    
-    menubar_ul_2.addEventListener('mouseenter', hover_menubar_Store_show)
-    menubar_ul_2.addEventListener('mouseleave', hover_menubar_noneshow)
-    
-    menubar_ul_3.addEventListener('mouseenter', hover_menubar_Store_show)
-    menubar_ul_3.addEventListener('mouseleave', hover_menubar_noneshow)
+globalnav_link_text_Store.addEventListener('mouseover', () => {
+    if (!isMenuVisible) {
+        hover_menubar_Store_show();
+        isMenuVisible = true;
+    }
+});
 
-    
-})
+menubar.addEventListener('mouseleave', () => {
+    if (isMenuVisible) {
+        hover_menubar_noneshow();
+        isMenuVisible = false;
+    }
+});
+
+
+});
